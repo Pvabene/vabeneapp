@@ -1,0 +1,8 @@
+{
+  "name": "vabene-mobile",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/vabene-mobile/src",
+  "projectType": "application",
+  "targets": {},
+  "tags": []
+}
