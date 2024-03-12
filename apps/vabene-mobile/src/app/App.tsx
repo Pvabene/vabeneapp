@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
+import { Logo } from '@vabene/libs';
 import React, { useRef, useState } from 'react';
 import {
   SafeAreaView,
@@ -24,6 +25,7 @@ export const App = () => {
           flex: 1,
         }}
       >
+        <Logo />
         <ScrollView
           ref={(ref) => {
             scrollViewRef.current = ref;
