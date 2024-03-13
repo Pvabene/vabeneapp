@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
-import { Logo } from '@vabene/libs';
+import { Logo, User } from '@vabene/libs';
 import React, { useRef, useState } from 'react';
 import {
   SafeAreaView,
@@ -17,6 +17,13 @@ export const App = () => {
   const [whatsNextYCoord, setWhatsNextYCoord] = useState<number>(0);
   const scrollViewRef = useRef<null | ScrollView>(null);
 
+  const user: Omit<User, 'password'> = {
+    id: 1,
+    name: 'vabene',
+    email: '',
+    role: 'Developer',
+  };
+
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -26,6 +33,7 @@ export const App = () => {
         }}
       >
         <Logo />
+        {JSON.stringify(user)}
         <ScrollView
           ref={(ref) => {
             scrollViewRef.current = ref;
